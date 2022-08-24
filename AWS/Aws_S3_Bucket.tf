@@ -1,13 +1,13 @@
-resource "aws_s3_bucket" "examplebucket" {
+resource "aws_s3_bucket" "ravi_testbucket" {
   bucket = "examplebuckettftest"
 }
 
-resource "aws_s3_bucket" "mfadelete" {
+resource "aws_s3_bucket" "ravi_testbucket" {
   bucket = "examplebuckettftest"
-  acl    = "private"
+  acl    = "public"
   versioning {
     enabled = true
-    mfa_delete = true
+    mfa_delete = false
   }
 }
 
