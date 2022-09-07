@@ -1,16 +1,16 @@
-resource "kubernetes_daemonset" "example" {
+resource "kubernetes_daemonset" "ravitest1" {
   metadata {
     name      = "terraform-example"
     namespace = "something"
     labels = {
-      test = "MyExampleApp"
+      test = "ravitest1"
     }
   }
   
   spec {
     selector {
       match_labels = {
-        test = "MyExampleApp"
+        test = "ravitest1"
       }
     }
   }
