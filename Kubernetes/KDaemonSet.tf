@@ -52,4 +52,22 @@ resource "kubernetes_daemonset" "ravitest3" {
   }
 }
 
+resource "kubernetes_daemonset" "ravitest4" {
+  metadata {
+    name      = "terraform-example"
+    namespace = "something"
+    labels = {
+      test = "ravitest4"
+    }
+  }
+  
+  spec {
+    selector {
+      match_labels = {
+        test = "ravitest4"
+      }
+    }
+  }
+}
+
 
